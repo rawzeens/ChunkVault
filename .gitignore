@@ -1,0 +1,7 @@
+# Your media and master key never go to git
+storage/*
+!storage/.htaccess
+
+.claude/
+node_modules/
+.DS_Store

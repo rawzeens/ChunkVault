@@ -1,0 +1,6 @@
+# Only for Apache hosts where you cannot set the document root to public/ (e.g. shared hosting).
+# Best setup: point the document root at public/ and this file is never used.
+Options -Indexes
+RewriteEngine On
+RewriteRule ^(\.git|\.claude|bin|src|storage|tests)(/|$) - [F,L]
+RewriteRule ^(?!public/)(.*)$ public/$1 [L]
